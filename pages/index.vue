@@ -5,15 +5,26 @@
         <NuxtLogo />
         <VuetifyLogo />
       </v-card> -->
-      <v-card>
-            <v-img
-              :src="'https://cdn.vuetifyjs.com/images/cards/house.jpg'"
-              class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
-            >
-              <v-card-title >Pre-fab homes</v-card-title>
-            </v-img>
+
+      <v-img
+        src="https://picsum.photos/1920/1080?random"
+        class="dark--text align-center"
+        height="400px"
+      >
+        <div class="fill-height bottom-gradient"></div>
+        <v-row justify="center" align="center">
+          <v-col cols="6" md="8">
+            <v-card-title class="text-h5">Pre-fab homes</v-card-title>
+            <v-card-text class="text-h6">
+              Curb Appeal Power Clean es una empresa de lavado a presión que se dedica a
+              brindar servicios de alta calidad y completa satisfacción a sus clientes en
+              todo el condado de Los Ángeles. ¡Llámenos hoy para una cotización gratis
+            </v-card-text>
+          </v-col>
+          <v-col cols="2"> </v-col>
+        </v-row>
+      </v-img>
+      <v-card max-height="800"> </v-card>
       <v-row dense>
         <v-col cols="12">
           <v-card color="#385F73" dark>

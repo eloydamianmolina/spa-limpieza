@@ -61,7 +61,7 @@
           </v-btn>
         </v-card-text>
 
-        <v-card-text class="white--text pt-0"> texto y cosa </v-card-text>
+        <v-card-text class="white--text pt-0"> texto grande</v-card-text>
 
         <v-divider></v-divider>
 
