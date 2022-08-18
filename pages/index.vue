@@ -5,28 +5,31 @@
         <NuxtLogo />
         <VuetifyLogo />
       </v-card> -->
+      <v-card>
+        <v-img
+          :src="require('~/assets/images/clearhome.jpg')"
+          class="dark--text align-center imagehome"
+          gradient="to top left, rgba(50,50,50,.11), rgba(25,32,72,.5)"
+          dark
+        >
+          <div class="fill-height bottom-gradient"></div>
+          <v-row justify="center" align="center">
+            <v-col cols="12" md="6">
+              <v-card-title class="text-h4">Pre-fab homes</v-card-title>
+              <v-card-subtitle class="text-h6">
+                Curb Appeal Power Clean es una empresa de lavado a presión que se dedica a
+                brindar servicios de alta calidad y completa satisfacción a sus clientes
+                en todo el condado de Los Ángeles. ¡Llámenos hoy para una cotización
+                gratis
+              </v-card-subtitle>
+            </v-col>
+            <v-col cols="12" md="4">
+              <form-home></form-home>
+            </v-col>
+          </v-row>
+        </v-img>
+      </v-card>
 
-      <v-img
-        src="https://picsum.photos/1920/1080?random"
-        class="dark--text align-center"
-        height="400px"
-        gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
-        dark
-      >
-        <div class="fill-height bottom-gradient"></div>
-        <v-row justify="center" align="center">
-          <v-col cols="12" md="8">
-            <v-card-title class="text-h5">Pre-fab homes</v-card-title>
-            <v-card-subtitle class="subtitle-1">
-              Curb Appeal Power Clean es una empresa de lavado a presión que se dedica a
-              brindar servicios de alta calidad y completa satisfacción a sus clientes en
-              todo el condado de Los Ángeles. ¡Llámenos hoy para una cotización gratis
-            </v-card-subtitle>
-          </v-col>
-          <v-col cols="2"> </v-col>
-        </v-row>
-      </v-img>
-      <form-home></form-home>
       <!-- <v-row dense>
         <v-col cols="12">
           <v-card color="#385F73" dark>
@@ -116,3 +119,8 @@ export default {
   name: "IndexPage",
 };
 </script>
+<style>
+.imagehome {
+  color: top left, rgba(50, 50, 50, 0.1), rgba(12, 29, 126, 0.5);
+}
+</style>

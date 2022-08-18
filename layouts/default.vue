@@ -1,18 +1,31 @@
 <template>
   <v-app>
     <v-card class="d-flex">
-      <v-app-bar fixed app>
+      <v-app-bar
+        fixed
+        dark
+        app
+        class="light-blue"
+        :src="require('~/assets/images/agua2.jpg')"
+      >
         <v-toolbar-title class="text-h6 text-sm-h4"
           ><v-avatar :tile="true">
             <img :src="require('@/static/vuetify-logo.svg')" alt="logo" /> </v-avatar
-          >Page titlesfasaf</v-toolbar-title
+          >Clean Company</v-toolbar-title
         >
+        <template v-slot:img="{ props }">
+          <v-img
+            v-bind="props"
+            gradient="to bottom , rgba(100,115,201,.10), rgba(25,32,72,.3)"
+          >
+          </v-img>
+        </template>
 
         <template v-slot:extension>
-          <v-tabs v-model="currentItem" centered>
+          <v-tabs v-model="currentItem" centered class="ml-5">
             <v-menu bottom left open-on-hover>
               <template v-slot:activator="{ on, attrs }">
-                <v-btn text class="align-self-center mr-4" v-bind="attrs" v-on="on">
+                <v-btn text class="align-self-center mb-3 mr-4" v-bind="attrs" v-on="on">
                   Services
                   <v-icon right> mdi-menu-down </v-icon>
                 </v-btn>
@@ -28,11 +41,15 @@
                 </v-list-item>
               </v-list>
             </v-menu>
-
-            <v-tab v-for="item in itemsTab" :key="item" :to="'/' + item">
-              {{ item }}
-            </v-tab>
-
+            <v-btn
+              class=""
+              :area-select="false"
+              v-for="item in itemsTab"
+              :key="item"
+              :to="'/' + item"
+              text
+              >{{ item }}</v-btn
+            >
             <!-- <v-menu bottom left>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn text class="align-self-center mr-4" v-bind="attrs" v-on="on">
@@ -52,9 +69,6 @@
       </v-app-bar>
     </v-card>
     <v-main>
-      <v-container>
-        <nuxt />
-      </v-container>
       <v-container>
         <nuxt />
       </v-container>
@@ -118,3 +132,10 @@ export default {
   },
 };
 </script>
+<style>
+#app {
+  /* background: url("~/assets/images/agua.jpg") no-repeat center center fixed !important;
+  background-size: cover; */
+  background-color: rgb(238, 238, 238);
+}
+</style>
