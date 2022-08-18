@@ -38,7 +38,9 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
-
+  transpile: [
+    "vee-validate/dist/rules"
+  ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
