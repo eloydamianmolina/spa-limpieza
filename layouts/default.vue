@@ -1,10 +1,11 @@
 <template>
   <v-app>
     <v-card class="d-flex">
-      <v-app-bar fixed app class="rounded-b-xl">
-        <v-toolbar-title class="text-h6 text-sm-h4"
-          ><v-avatar :tile="true">
-            <img :src="require('@/static/vuetify-logo.svg')" alt="logo" /> </v-avatar
+      <v-app-bar fixed app class="rounded-b-xl" :elevation="0">
+        <v-avatar :tile="true" @click="$router.push('/')">
+          <img :src="require('@/static/vuetify-logo.svg')" alt="logo" />
+        </v-avatar>
+        <v-toolbar-title flat text class="text-h5" @click="$router.push('/')"
           >Clean Company</v-toolbar-title
         >
         <template v-slot:img="{ props }">
@@ -16,31 +17,32 @@
         </template>
 
         <template v-slot:extension>
-          <v-spacer></v-spacer>
-          <v-tabs v-model="currentItem" class="">
-            <v-menu bottom left open-on-hover>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn
-                  text
-                  class="align-self-center mb-3 ml-sm-16 ml-md-16"
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  Services
-                  <v-icon right> mdi-menu-down </v-icon>
-                </v-btn>
-              </template>
+          <v-tabs hide-slider centered v-model="currentItem">
+            <v-tab>
+              <v-menu bottom left open-on-hover>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-btn
+                    text
+                    class="align-self-center mb-3 ml-sm-16 ml-md-16"
+                    v-bind="attrs"
+                    v-on="on"
+                  >
+                    Services
+                    <v-icon right> mdi-menu-down </v-icon>
+                  </v-btn>
+                </template>
 
-              <v-list class="grey lighten-3">
-                <v-list-item
-                  v-for="item in services"
-                  :key="item.name"
-                  :to="'/services/' + item.href"
-                >
-                  {{ item.name }}
-                </v-list-item>
-              </v-list>
-            </v-menu>
+                <v-list class="grey lighten-3">
+                  <v-list-item
+                    v-for="item in services"
+                    :key="item.name"
+                    :to="'/services/' + item.href"
+                  >
+                    {{ item.name }}
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </v-tab>
             <v-btn
               class=""
               :area-select="false"
@@ -50,6 +52,7 @@
               text
               >{{ item }}</v-btn
             >
+
             <!-- <v-menu bottom left>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn text class="align-self-center mr-4" v-bind="attrs" v-on="on">
@@ -87,10 +90,12 @@
       <v-col cols="12">
         <v-row flat tile class="text-center">
           <v-card-text>
-            <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
-              <v-icon size="24px">
-                {{ icon }}
-              </v-icon>
+            <v-btn v-for="icon in icons" :key="icon.icon" class="mx-4" icon>
+              <a :href="'https://' + icon.href" target="_blank" rel="noopener noreferrer">
+                <v-icon size="24px" color="grey darken-2">
+                  {{ icon.icon }}
+                </v-icon>
+              </a>
             </v-btn>
           </v-card-text>
 

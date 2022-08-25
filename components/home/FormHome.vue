@@ -1,8 +1,10 @@
 <template>
   <validation-observer ref="observer " v-slot="{ invalid }">
-    <v-card color="cardColor dark--text" hover>
+    <v-card color="cardColor dark--text" hover dark>
       <form class="px-4 my-3" @submit.prevent="submit">
-        <v-card-title>Ready For A Clean Home? Request A Free Quote Now</v-card-title>
+        <p class="text-center text-h5 pt-5">
+          Ready For A Clean Home? Request A Free Quote Now
+        </p>
         <validation-provider v-slot="{ errors }" name="Name" rules="required|max:10">
           <v-text-field
             v-model="name"
@@ -129,7 +131,8 @@ export default {
   },
 };
 </script>
-<style>
+
+<style scoped>
 .cardColor {
   background-color: rgba(3, 3, 3, 0.658) !important;
   border-color: white !important;
