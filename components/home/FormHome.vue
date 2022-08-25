@@ -1,6 +1,6 @@
 <template>
-  <validation-observer ref="observer" v-slot="{ invalid }">
-    <v-card color="cardColor" hover>
+  <validation-observer ref="observer " v-slot="{ invalid }">
+    <v-card color="cardColor dark--text" hover>
       <form class="px-4 my-3" @submit.prevent="submit">
         <v-card-title>Ready For A Clean Home? Request A Free Quote Now</v-card-title>
         <validation-provider v-slot="{ errors }" name="Name" rules="required|max:10">
@@ -42,7 +42,7 @@
             v-model="select"
             :items="items"
             :error-messages="errors"
-            label="Select"
+            label="Services"
             data-vv-name="select"
             required
           ></v-select>
@@ -131,7 +131,10 @@ export default {
 </script>
 <style>
 .cardColor {
-  background-color: rgba(8, 82, 219, 0.658) !important;
+  background-color: rgba(3, 3, 3, 0.658) !important;
   border-color: white !important;
+}
+#label {
+  color: black;
 }
 </style>

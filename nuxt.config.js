@@ -18,7 +18,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
 
@@ -37,6 +37,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-fonts'
   ],
   transpile: [
     "vee-validate/dist/rules"
@@ -50,6 +51,7 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
+      light: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -59,7 +61,11 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-        }
+        },
+        light: {
+          primary: colors.red.darken1,
+          secondary: colors.red.lighten4, 
+          accent: colors.indigo.base}
       }
     }
   },

@@ -5,7 +5,7 @@
         <NuxtLogo />
         <VuetifyLogo />
       </v-card> -->
-      <v-card>
+      <v-card class="rounded-b-xl">
         <v-img
           :src="require('~/assets/images/clearhome.jpg')"
           class="dark--text align-center imagehome"
@@ -29,6 +29,9 @@
           </v-row>
         </v-img>
       </v-card>
+      <div class="mt-5 mb-5">
+        <home-services></home-services>
+      </div>
 
       <!-- <v-row dense>
         <v-col cols="12">
@@ -57,7 +60,7 @@
           </p>
           <p>
             For more information on Vuetify, check out the
-            <a href="https://vuetifyjs.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               documentation </a
             >.
           </p>
@@ -67,7 +70,6 @@
               href="https://chat.vuetifyjs.com/"
               target="_blank"
               rel="noopener noreferrer"
-              title="chat"
             >
               discord </a
             >.
@@ -114,8 +116,9 @@
 
 <script>
 import FormHome from "../components/home/FormHome.vue";
+import HomeServices from "../components/home/HomeServices.vue";
 export default {
-  components: { FormHome },
+  components: { FormHome, HomeServices },
   name: "IndexPage",
 };
 </script>

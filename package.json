@@ -19,6 +19,7 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-fonts": "^3.0.0-0",
     "@nuxtjs/vuetify": "^1.12.3"
   }
 }
