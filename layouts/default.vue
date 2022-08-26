@@ -87,9 +87,9 @@
       </v-container>
     </v-main>
     <v-footer padless>
-      <v-col cols="12">
-        <v-row flat tile class="text-center">
-          <v-card-text>
+      <v-row tile justify="center" class="">
+        <v-col class="mt-0 pt-0 text-center" cols="12">
+          <v-card-text class="mb-0 pb-0">
             <v-btn v-for="icon in icons" :key="icon.icon" class="mx-4" icon>
               <a :href="'https://' + icon.href" target="_blank" rel="noopener noreferrer">
                 <v-icon size="24px" color="grey darken-2">
@@ -98,16 +98,55 @@
               </a>
             </v-btn>
           </v-card-text>
+          <!-- <v-divider class="mt-0"></v-divider> -->
+        </v-col>
+        <v-col cols="3">
+          <v-avatar :tile="true" @click="$router.push('/')">
+            <img :src="require('@/static/vuetify-logo.svg')" alt="logo" />
+          </v-avatar>
+          <h5 flat text class="text-h5" @click="$router.push('/')">Clean Company</h5>
+        </v-col>
+        <v-divider vertical></v-divider>
+        <v-col cols="2">
+          <span class="subtitle-2">Services</span>
+          <ul class="">
+            <li
+              class="caption"
+              v-for="service in services"
+              :key="service.name"
+              @click="$router.push('/services/' + service.href)"
+            >
+              {{ service.name }}
+            </li>
+          </ul>
+        </v-col>
+        <v-col class="" cols="2">
+          <span class="subtitle-2">Options</span>
+          <ul class="">
+            <li
+              class="caption"
+              v-for="option in options"
+              :key="option.name"
+              @click="$router.push('/services/' + option.href)"
+            >
+              {{ option.name }}
+            </li>
+          </ul>
+        </v-col>
+        <v-col class="" cols="2">
+          <span class="subtitle-2">Contact</span>
+          <ul class="">
+            <li class="caption" @click="$router.push('/about_us')">About us</li>
+            <li class="caption" @click="$router.push('/about_us')">54645645664</li>
+          </ul>
+        </v-col>
 
-          <v-card-text class="pt-0"> texto grande</v-card-text>
+        <!-- <v-card-text class="pt-0 text-center"> texto grande</v-card-text> -->
 
-          <v-divider></v-divider>
-
-          <v-card-text class="">
-            {{ new Date().getFullYear() }} — <strong>Clean Company</strong>
-          </v-card-text>
-        </v-row>
-      </v-col>
+        <v-card-text class="text-center">
+          {{ new Date().getFullYear() }} — <strong>Clean Company</strong>
+        </v-card-text>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -125,6 +164,13 @@ export default {
       ],
       currentItem: "tab-Web",
       itemsTab: ["Frequently Asked Questions", "Client Policies", "About us"],
+      options: [
+        {
+          name: "Frequently Asked Questions",
+          href: "apartamentcleaning",
+        },
+        { name: "Client Policies", href: "Client Policies" },
+      ],
       services: [
         {
           name: "Apartament Clean",
