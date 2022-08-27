@@ -100,14 +100,14 @@
           </v-card-text>
           <!-- <v-divider class="mt-0"></v-divider> -->
         </v-col>
-        <v-col cols="3">
+        <v-col v-if="!$vuetify.breakpoint.mobile" cols="3">
           <v-avatar :tile="true" @click="$router.push('/')">
             <img :src="require('@/static/vuetify-logo.svg')" alt="logo" />
           </v-avatar>
           <h5 flat text class="text-h5" @click="$router.push('/')">Clean Company</h5>
         </v-col>
         <v-divider vertical></v-divider>
-        <v-col cols="2">
+        <v-col cols="4" sm="2" md="2">
           <span class="subtitle-2">Services</span>
           <ul class="">
             <li
@@ -120,7 +120,7 @@
             </li>
           </ul>
         </v-col>
-        <v-col class="" cols="2">
+        <v-col class="" cols="4" sm="2" md="2">
           <span class="subtitle-2">Options</span>
           <ul class="">
             <li
@@ -133,7 +133,7 @@
             </li>
           </ul>
         </v-col>
-        <v-col class="" cols="2">
+        <v-col class="" cols="4" sm="2" md="2">
           <span class="subtitle-2">Contact</span>
           <ul class="">
             <li class="caption" @click="$router.push('/about_us')">About us</li>
