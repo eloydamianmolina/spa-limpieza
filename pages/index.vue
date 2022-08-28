@@ -7,8 +7,9 @@
       </v-card> -->
       <v-card class="rounded-b-xl">
         <v-img
-          :src="require('~/assets/images/clearhome.jpg')"
+          :src="require('~/assets/images/clean_room.jpg')"
           class="dark--text align-center imagehome"
+          :max-height="$vuetify.breakpoint.mobile ? '800' : '500'"
           gradient="to top left, rgba(50,50,50,.11), rgba(25,32,72,.5)"
           dark
         >
@@ -51,7 +52,7 @@
       </v-row> -->
       <v-card>
         <v-card-title class="headline d-flex justify-center">
-          Welcome to the Vuetify + Nuxt.js template
+          Add important info
         </v-card-title>
         <v-card-text>
           <p>

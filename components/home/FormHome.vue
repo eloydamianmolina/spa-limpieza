@@ -1,6 +1,6 @@
 <template>
   <validation-observer ref="observer " v-slot="{ invalid }">
-    <v-card color="cardColor dark--text" hover dark>
+    <v-card color="cardColor " hover dark>
       <form class="px-4 my-3" @submit.prevent="submit">
         <p class="text-center text-h5 pt-5">
           Ready For A Clean Home? Request A Free Quote Now

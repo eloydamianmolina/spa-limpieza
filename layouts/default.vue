@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-card class="d-flex">
-      <v-app-bar fixed app class="rounded-b-xl" :elevation="0">
+      <v-app-bar fixed app class="rounded-b-xl blue lighten-3" :elevation="0">
         <v-avatar :tile="true" @click="$router.push('/')">
           <img :src="require('@/static/vuetify-logo.svg')" alt="logo" />
         </v-avatar>
@@ -9,10 +9,8 @@
           >Clean Company</v-toolbar-title
         >
         <template v-slot:img="{ props }">
-          <v-img
-            v-bind="props"
-            gradient="to top , rgba(100,115,201,.10), rgba(25,32,72,.1)"
-          >
+          <v-img v-bind="props">
+            <!-- gradient="to top , rgba(100,115,201,.10), rgba(25,32,72,.3)" -->
           </v-img>
         </template>
 
@@ -86,7 +84,7 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer padless>
+    <v-footer class="blue lighten-2" padless>
       <v-row tile justify="center" class="">
         <v-col class="mt-0 pt-0 text-center" cols="12">
           <v-card-text class="mb-0 pb-0">
@@ -137,7 +135,7 @@
           <span class="subtitle-2">Contact</span>
           <ul class="">
             <li class="caption" @click="$router.push('/about_us')">About us</li>
-            <li class="caption" @click="$router.push('/about_us')">54645645664</li>
+            <li class="caption">54645645664</li>
           </ul>
         </v-col>
 
@@ -216,7 +214,7 @@ export default {
 #app {
   /* background: url("~/assets/images/agua.jpg") no-repeat center center fixed !important;
   background-size: cover; */
-  background-color: rgb(253, 253, 253);
+  background-color: rgb(255, 255, 255);
 }
 .v-tabs {
   align-items: end;

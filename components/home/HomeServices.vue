@@ -1,11 +1,11 @@
 <template>
-  <v-row class="justify-center grey lighten-3 pt-5 pb-5">
+  <v-row class="justify-center lighten-3 pt-5 pb-5">
     <v-col cols="12" class="text-center">
       <p class="text-h2 service">Services</p>
       <v-divider></v-divider>
     </v-col>
     <v-col v-for="n in items" cols="6" sm="2" :key="n.name" class="">
-      <v-card hover max-width="250" color="" :to="'/services/' + n.href">
+      <v-card hover max-width="250" class="blue lighten-4" :to="'/services/' + n.href">
         <v-img
           :src="require('~/assets/images/' + n.url)"
           aspect-ratio="1"
