@@ -1,6 +1,6 @@
 <template>
-  <validation-observer ref="observer " v-slot="{ invalid }">
-    <v-card class="" color="cardColor" hover light>
+  <validation-observer ref="observer" v-slot="{ invalid }">
+    <v-card class="" color="cardColorBlue" hover light>
       <form class="px-4 my-3" @submit.prevent="submit">
         <p class="text-center text-h5 pt-5">
           Ready For A Clean Home? Request A Free Quote Now
@@ -135,6 +135,11 @@ export default {
 <style scoped>
 .cardColor {
   background-color: #e0e0e0 !important;
+  border-color: white !important;
+  opacity: 0.8;
+}
+.cardColorBlue {
+  background-color: #90caf9 !important;
   border-color: white !important;
   opacity: 0.8;
 }

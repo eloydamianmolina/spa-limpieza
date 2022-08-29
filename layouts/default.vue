@@ -84,7 +84,7 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer class="blue lighten-2" padless>
+    <v-footer class="blue lighten-4" padless>
       <v-row tile justify="center" class="">
         <v-col class="mt-0 pt-0 text-center" cols="12">
           <v-card-text class="mb-0 pb-0">

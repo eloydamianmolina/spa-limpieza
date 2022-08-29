@@ -7,7 +7,7 @@
       </v-card> -->
       <v-card class="rounded-b-xl">
         <v-img
-          :src="require('~/assets/images/clean_room.jpg')"
+          :src="require('~/assets/images/clean_room2.jpg')"
           class="white--text align-center imagehome"
           :max-height="$vuetify.breakpoint.mobile ? '800' : '500'"
           gradient="to left, rgba(50,50,50,.0), rgba(25,32,72,.3)"
