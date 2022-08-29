@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-card class="d-flex">
-      <v-app-bar fixed app class="rounded-b-xl blue lighten-3" :elevation="0">
+      <v-app-bar fixed app class="rounded-b-xl blue lighten-4" :elevation="0">
         <v-avatar :tile="true" @click="$router.push('/')">
           <img :src="require('@/static/vuetify-logo.svg')" alt="logo" />
         </v-avatar>
@@ -15,7 +15,7 @@
         </template>
 
         <template v-slot:extension>
-          <v-tabs hide-slider centered v-model="currentItem">
+          <v-tabs class="blue lighten-5" hide-slider centered v-model="currentItem">
             <v-tab>
               <v-menu bottom left open-on-hover>
                 <template v-slot:activator="{ on, attrs }">
@@ -214,7 +214,7 @@ export default {
 #app {
   /* background: url("~/assets/images/agua.jpg") no-repeat center center fixed !important;
   background-size: cover; */
-  background-color: rgb(255, 255, 255);
+  background-color: #eceff1;
 }
 .v-tabs {
   align-items: end;

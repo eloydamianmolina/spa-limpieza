@@ -8,16 +8,21 @@
       <v-card class="rounded-b-xl">
         <v-img
           :src="require('~/assets/images/clean_room.jpg')"
-          class="dark--text align-center imagehome"
+          class="white--text align-center imagehome"
           :max-height="$vuetify.breakpoint.mobile ? '800' : '500'"
-          gradient="to top left, rgba(50,50,50,.11), rgba(25,32,72,.5)"
+          gradient="to left, rgba(50,50,50,.0), rgba(25,32,72,.3)"
+          style="
+             {
+              opacity: 0.5;
+            }
+          "
           dark
         >
           <div class="fill-height bottom-gradient"></div>
           <v-row justify="center" align="center">
             <v-col cols="12" md="6">
-              <v-card-title class="text-h4">Pre-fab homes</v-card-title>
-              <v-card-subtitle class="text-h6">
+              <v-card-title class="text-h3">Pre-fab homes</v-card-title>
+              <v-card-subtitle class="text-h5">
                 Curb Appeal Power Clean es una empresa de lavado a presión que se dedica a
                 brindar servicios de alta calidad y completa satisfacción a sus clientes
                 en todo el condado de Los Ángeles. ¡Llámenos hoy para una cotización
